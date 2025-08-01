@@ -15,22 +15,90 @@ body {
 /* Header */
 header {
   background-color: var(--accent-color);
+  margin-top: -48px; /* adds small bar above header bar*/
 }
 header h1 {
   font-size: 70px;
   font-weight: bold;
   text-align: center;
+  margin-bottom: -10px; /* makes nav bar and title look tight*/
 }
-nav ul {
-  font-size: 30px;
+ul {
+  margin: 0 auto;
+  font-size: 25px;
   list-style: none;
   display: flex;
   justify-content: center;
+  gap: 30px;
+  text-align: center;
 }
-nav ul li {
+ul li {
   padding: 20px;
 }
+ul li a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+a:hover {
+  color: var(--background-color);
+}
 
+/* Main */
+main {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+section {
+  padding: 20px;
+  border-radius: 8px;
+}
+#bio {
+  background-color: white;
+}
+p {
+  font-size: 25px;
+  padding: 0 40px 0 40px;
+  line-height: 1.5;
+}
+img {
+  height: 450px;
+  border-radius: 8px;
+}
 
+/* Footer */
+footer {
+  background-color: var(--accent-color);
+}
 
-
+/* Breakpoints for Small Screens */
+@media (max-width: 1000px) {
+  header {
+    margin-top: -28px; /* adds small bar above header bar*/
+  }
+  header h1 {
+    font-size: 40px;
+    margin-bottom: 5px;
+  }
+  ul {
+    flex-direction: column;
+    gap: 5px;
+    font-size: 18px;
+  }
+  ul li {
+    padding: 5px;
+  }
+  main {
+    flex-direction: column;
+    text-align: center;
+    padding: 5px;
+  }
+  main p {
+    font-size: 18px;
+    padding: 0 10px 0 10px;
+  }
+  main img {
+    height: 300px;
+  }
+}
