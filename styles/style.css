@@ -1,7 +1,7 @@
 :root {
-  --primary-color: #153B50;
+  --primary-color: #CC998D;
   --secondary-color: #429EA6;
-  --accent-color: #CC998D;
+  --accent-color: #153B50;
   --background-color: #ECEBE4;
 }
 
@@ -11,6 +11,14 @@ body {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   margin: 0 auto;
 }
+ul {
+  display: flex;
+  gap: 30px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 25px;
+  list-style: none;
+}
 
 /* Header */
 header {
@@ -19,29 +27,24 @@ header {
 }
 header h1 {
   font-size: 70px;
+  color: white;
   font-weight: bold;
   text-align: center;
   margin-bottom: -10px; /* makes nav bar and title look tight*/
 }
-ul {
-  margin: 0 auto;
-  font-size: 25px;
-  list-style: none;
-  display: flex;
+header ul {
   justify-content: center;
-  gap: 30px;
-  text-align: center;
 }
 ul li {
   padding: 20px;
 }
 ul li a {
-  color: black;
+  color: white;
   font-weight: bold;
   text-decoration: none;
 }
 a:hover {
-  color: var(--background-color);
+  color: #a7a7a7;
 }
 
 /* Main */
@@ -71,20 +74,35 @@ img {
 footer {
   background-color: var(--accent-color);
 }
+.social img {
+  height: 50px;
+}
+.social img:hover {
+  opacity: 60%;
+}
+footer ul {
+  justify-content: space-between;
+}
+footer ul section {
+  display: flex;
+}
 
 /* Breakpoints for Small Screens */
 @media (max-width: 1000px) {
   header {
-    margin-top: -28px; /* adds small bar above header bar*/
+    margin-top: -28px;
   }
   header h1 {
     font-size: 40px;
     margin-bottom: 5px;
   }
-  ul {
+  header ul {
     flex-direction: column;
+  }
+  ul {
     gap: 5px;
     font-size: 18px;
+    margin-left: -25px;
   }
   ul li {
     padding: 5px;
@@ -100,5 +118,11 @@ footer {
   }
   main img {
     height: 300px;
+  }
+  .social img {
+    height: 40px;
+  }
+  footer section {
+    gap: 15px;
   }
 }

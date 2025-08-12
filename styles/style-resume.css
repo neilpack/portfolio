@@ -1,0 +1,140 @@
+:root {
+  --primary-color: #CC998D;
+  --secondary-color: #429EA6;
+  --accent-color: #153B50;
+  --background-color: #ECEBE4;
+}
+
+/* Global */
+body {
+  background-color: var(--background-color);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 0 auto;
+}
+ul {
+  display: flex;
+  gap: 30px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 25px;
+  list-style: none;
+}
+
+/* Header */
+header {
+  background-color: var(--accent-color);
+  margin-top: -48px; /* adds small bar above header bar*/
+}
+header h1 {
+  font-size: 70px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: -10px; /* makes nav bar and title look tight*/
+}
+header ul {
+  justify-content: center;
+}
+ul li {
+  padding: 20px;
+}
+ul li a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+a:hover {
+  color: #a7a7a7;
+}
+
+/* Main */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px;
+}
+main div {
+  display: flex;
+  justify-content: center;
+}
+main div h2 {
+  font-size: 40px;
+}
+section {
+  padding: 20px;
+  border-radius: 8px;
+}
+#bio {
+  background-color: white;
+}
+p {
+  font-size: 25px;
+  padding: 0 40px 0 40px;
+  line-height: 1.5;
+}
+img {
+  height: 450px;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--accent-color);
+  margin-top: 20px;
+}
+.social img {
+  height: 50px;
+}
+.social img:hover {
+  opacity: 60%;
+}
+footer ul {
+  justify-content: space-between;
+}
+footer ul section {
+  display: flex;
+}
+
+/* Breakpoints for Small Screens */
+@media (max-width: 1000px) {
+  header {
+    margin-top: -28px;
+  }
+  header h1 {
+    font-size: 40px;
+    margin-bottom: 5px;
+  }
+  header ul {
+    flex-direction: column;
+  }
+  ul {
+    gap: 5px;
+    font-size: 18px;
+    margin-left: -25px;
+  }
+  ul li {
+    padding: 5px;
+  }
+  main {
+    flex-direction: column;
+    text-align: center;
+    padding: 5px;
+  }
+  main div {
+    flex-direction: column;
+  }
+  main p {
+    font-size: 18px;
+    padding: 0 10px 0 10px;
+  }
+  main img {
+    height: 300px;
+  }
+  .social img {
+    height: 40px;
+  }
+  footer section {
+    gap: 15px;
+  }
+}
