@@ -8,7 +8,6 @@
 /* Global */
 body {
   background-color: var(--background-color);
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   margin: 0 auto;
 }
 ul {
@@ -16,6 +15,7 @@ ul {
   gap: 30px;
   text-align: center;
   margin: 0 auto;
+  margin-left: -40px;
   font-size: 25px;
   list-style: none;
 }
@@ -24,6 +24,7 @@ ul {
 header {
   background-color: var(--accent-color);
   margin-top: -48px; /* adds small bar above header bar*/
+  margin-left: -25px;
 }
 header h1 {
   font-size: 70px;
@@ -57,26 +58,74 @@ main {
 main div {
   display: flex;
   justify-content: center;
+  margin-bottom: 25px; /* This line is for multiple schools needing spacing under it*/
 }
 main div h2 {
-  font-size: 40px;
+  font-size: 35px;
+  color: white;
+}
+.title {
+  background-color: var(--accent-color);
+  border-radius: 10px;
+  margin: 20px 100px 20px 100px;
+  font-family: "Alumni Sans SC";
 }
 section {
   padding: 20px;
   border-radius: 8px;
 }
-#bio {
+.splash {
+  margin: 0 130px 0 130px;
+}
+.bio {
   background-color: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.italic {
+  font-style: italic;
+}
+.bold {
+  font-weight: bold;
+}
+h3 {
+  font-size: 30px;
+  padding: 0 40px 0 40px;
 }
 p {
-  font-size: 25px;
+  font-size: 18px;
   padding: 0 40px 0 40px;
   line-height: 1.5;
 }
 img {
-  height: 450px;
+  height: 350px;
   border-radius: 8px;
 }
+.school {
+  height: 215px;
+}
+.solo {
+  flex-direction: column;
+}
+.solo > section {
+  background-color: white;
+  margin: 0px 300px 20px 300px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+#skills {
+  display: flex;
+  flex-wrap: wrap; /* allows items to wrap to the next line */
+  margin-left: 30px;
+  margin-right: 30px;
+  gap: 12px;
+  justify-content: center;
+}
+#skills > section {
+  background-color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1); /*makes the boxes pop a bit*/
+}
+
 
 /* Footer */
 footer {
@@ -97,9 +146,18 @@ footer ul section {
 }
 
 /* Breakpoints for Small Screens */
+@media (max-width: 1200px) {
+  h3 {
+    font-size: 24px;
+  }
+  main p {
+    font-size: 16px;
+  }
+}
 @media (max-width: 1000px) {
   header {
     margin-top: -28px;
+    margin-left: 0px;
   }
   header h1 {
     font-size: 40px;
@@ -111,7 +169,6 @@ footer ul section {
   ul {
     gap: 5px;
     font-size: 18px;
-    margin-left: -25px;
   }
   ul li {
     padding: 5px;
@@ -123,6 +180,20 @@ footer ul section {
   }
   main div {
     flex-direction: column;
+    margin-bottom: 0px; /* The schools no longer need extra spacing under it*/
+  }
+  main div h2 {
+    font-size: 25px;
+  }
+  section {
+    padding: 7px;
+  }
+  #title {
+    margin: 10px 50px 10px 50px;
+  }
+  .bio { /*makes smaller screen bios have some spacing*/
+    margin-left: 20px;
+    margin-right: 20px;
   }
   main p {
     font-size: 18px;
@@ -130,6 +201,18 @@ footer ul section {
   }
   main img {
     height: 300px;
+  }
+  .splash {
+    margin: 0 10px 0 10px;
+  }
+  .school {
+    display: none;
+  }
+  .solo > section {
+    margin: 0px 20px 20px 20px;
+  }
+  #skills {
+    flex-direction: row;
   }
   .social img {
     height: 40px;
