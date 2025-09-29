@@ -19,6 +19,9 @@ ul {
   font-size: 25px;
   list-style: none;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 /* Header */
 header {
@@ -90,6 +93,7 @@ section {
 h3 {
   font-size: 30px;
   padding: 0 40px 0 40px;
+  font-family: "Alumni Sans SC";
 }
 p {
   font-size: 18px;
@@ -126,6 +130,16 @@ img {
   box-shadow: 0 1px 3px rgba(0,0,0,0.1); /*makes the boxes pop a bit*/
 }
 
+/* Download Button */
+.download {
+  background-color: var(--accent-color);
+  border-radius: 10px;
+  font-family: "Alumni Sans SC";
+  font-size: 20px;
+  padding: 20px 50px 20px 50px;
+  text-decoration: none;
+  color: white;
+}
 
 /* Footer */
 footer {
@@ -213,6 +227,9 @@ footer ul section {
   }
   #skills {
     flex-direction: row;
+  }
+  .download-container {
+    margin-top: 30px;
   }
   .social img {
     height: 40px;

@@ -19,6 +19,9 @@ ul {
   list-style: none;
   margin-left: -40px;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 /* Header */
 header {
