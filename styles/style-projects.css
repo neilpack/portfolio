@@ -1,0 +1,226 @@
+:root {
+  --primary-color: #CC998D;
+  --secondary-color: #0f4765;
+  --accent-color: #153B50;
+  --background-color: #ECEBE4;
+}
+
+/* Global */
+body {
+  background-color: var(--background-color);
+  margin: 0 auto;
+}
+h2 {
+  font-family: "Alumni Sans SC";
+  font-size: 35px;
+  color: white;
+}
+p {
+  color: white;
+}
+h3 {
+  color: white;
+}
+ul {
+  display: flex;
+  gap: 30px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 25px;
+  list-style: none;
+  margin-left: -40px;
+  color: white;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+  background-color: var(--accent-color);
+  margin-top: -48px; /* removes small bar above header bar*/
+  margin-left: -25px;
+}
+header h1 {
+  font-size: 70px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: -10px; /* makes nav bar and title look tight*/
+}
+header ul {
+  justify-content: center;
+}
+header ul li {
+  padding: 20px;
+}
+header ul li a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+a:hover {
+  color: #a7a7a7;
+}
+
+/* Main */
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+#title {
+  background-color: var(--accent-color);
+  max-width: 800px;
+  padding: 0 140px; /*makes the title blue box look wide*/
+  border-radius: 10px;
+  text-align: center;
+  margin: 0 auto 20px auto; /*makes it look in the center of the screen*/
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  gap: 3px;
+}
+#search-input {
+  width: 100%;
+  max-width: 600px;
+  padding: 6px;
+  font-size: 16px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+#search-button {
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+#refresh-button {
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.search-bar img {
+  height: 18px;
+}
+
+/* Project Grid */
+#project-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  text-align: center;
+}
+.project {
+  background-color: #0f4765;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.project img {
+  margin-top: 15px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.project-description {
+  text-align: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.project-link {
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin-top: -20px;
+}
+.project-link p {
+  border: 1px solid white;
+  background-color: #153B50;
+  color: white;
+  padding: 5px;
+  max-width: 120px;
+  border-radius: 5px;
+}
+.project-link:hover {
+  opacity: 60%;
+}
+.project-tags {
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+  color: black;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+.project-tags li {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--accent-color);
+}
+.social img {
+  height: 50px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.social img:hover {
+  opacity: 60%;
+}
+footer ul {
+  justify-content: space-between;
+}
+footer ul li {
+  padding: 20px;
+}
+footer ul section {
+  display: flex;
+}
+
+/* Breakpoints for Small Screens */
+@media (max-width: 1000px) {
+  header {
+    margin-top: -28px;
+    margin-left: 0px;
+  }
+  header h1 {
+    font-size: 40px;
+    margin-bottom: 5px;
+  }
+  header ul {
+    flex-direction: column;
+  }
+  ul {
+    gap: 5px;
+    font-size: 18px;
+  }
+  header ul li {
+    padding: 5px;
+  }
+  #title {
+    max-width: 400px;
+    padding: 0 120px;
+  }
+  h2 {
+    font-size: 25px;
+  }
+  #project-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .social img {
+    height: 40px;
+  }
+}
+@media (max-width: 650px) {
+  #project-container {
+    grid-template-columns: 1fr;
+  }
+}

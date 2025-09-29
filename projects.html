@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="styles/index-style.css">
+    <link rel="stylesheet" href="styles/style-projects.css">
     <meta name="description" content="Personal portfolio of Neil Pack, showcasing web development, design, and creative projects.">
     <meta name="keywords" content="portfolio, web developer, frontend, backend, HTML, CSS, JavaScript, Python, C#, SQL, MySQL">
     <meta name="author" content="Neil Pack">
     <link rel="icon" href="images/favicon.ico">
+    <script src="scripts/projects.js" defer></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&display=swap');
     </style>
@@ -25,7 +26,24 @@
         </nav>
     </header>
     <main>
-        <h2>This part of my Portfolio is not finished yet</h2>
+        <div id="title">
+            <h2>Personal Projects</h2>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input 
+                type="text" 
+                id="search-input" 
+                placeholder="Search projects...">
+            <button id="search-button"><img src="images/search.png" alt="Magnifying glass search icon"></button>
+            <button id="refresh-button" onclick="location.reload()"><img src="images/reload.png" alt="Refresh search icon"></button>
+        </div>
+
+        <!-- Project Grid -->
+         <div id="project-container">
+            <!-- Script fills this in later -->
+         </div>
 
     </main>
     <footer>
