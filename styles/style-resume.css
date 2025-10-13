@@ -27,7 +27,6 @@ html {
 header {
   background-color: var(--accent-color);
   margin-top: -48px; /* adds small bar above header bar*/
-  margin-left: -25px;
 }
 header h1 {
   font-size: 70px;
@@ -159,6 +158,12 @@ footer ul {
 footer ul section {
   display: flex;
 }
+footer ul li {
+  padding: 10px;
+}
+footer section {
+  gap: 13px;
+}
 
 /* Breakpoints for Small Screens */
 @media (max-width: 1200px) {
@@ -236,6 +241,6 @@ footer ul section {
     height: 40px;
   }
   footer section {
-    gap: 15px;
+    gap: 10px;
   }
 }

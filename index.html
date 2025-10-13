@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="styles/index-style.css">
+    <link rel="stylesheet" href="styles/style-index.css">
     <meta name="description" content="Personal portfolio of Neil Pack, showcasing web development, design, and creative projects.">
     <meta name="keywords" content="portfolio, web developer, frontend, backend, HTML, CSS, JavaScript, Python, C#, SQL, MySQL">
     <meta name="author" content="Neil Pack">
     <link rel="icon" href="images/favicon.ico">
+    <script src="scripts/home.js" defer></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&display=swap');
     </style>
 </head>
 <body>
     <header>
-        <h1>Neil Pack - Portfolio</h1>
+        <h1>Portfolio</h1>
         <nav>
             <ul>
             <li><a href="index.html">Home</a></li>
@@ -25,15 +26,39 @@
         </nav>
     </header>
     <main>
-        <section>
-            <img src="images/mini.jpeg" alt="Professional photo of me">
-        </section>
-        <section id="bio">
-            <p>I’m a Software Engineering student at Brigham Young University–Idaho, with a certificate in Quality Assurance.</p>
-            <p>I have hands-on experience with C#, JavaScript, Python, and MySQL relational databases, and I’m proficient with Git, GitHub, and project management tools like Microsoft Excel and Microsoft Planner.
-                I’m passionate about building reliable, efficient software and continuously learning new technologies.</p>
-            <p>Feel free to check out my personal projects in the tab above, or my other repositories on GitHub! </p>
-        </section>
+        <div class="animations">
+            <section class="animation hidden">
+                <img src="images/hero01.JPG" alt="My wife and I on campus">
+            </section>
+            <section class="animation hidden">
+                <img src="images/hero06.jpeg" alt="Me standing by some trees">
+            </section>
+            <section class="animation hidden">
+                <img src="images/hero03.JPG" alt="My wife and I at a waterfall">
+            </section>
+        </div>
+
+        <div class="animations">
+            <section class="title animation hidden">
+                <h1>Neil Pack</h1>
+                <p>Software Engineer</p>
+            </section>
+        </div>
+
+        <div>
+            <section>
+                <img src="images/hero02.png" alt="Me outside in the snow">
+            </section>
+            <section class="bio">
+                <h3>About Me</h3>
+                <p>I’m a Software Engineering student at Brigham Young University–Idaho, with a certificate in Quality Assurance.</p>
+                <p>I am originally from Des Moines, Iowa. The midwest plains still is one of my favorite places. 
+                     I am married to my beautiful wife, and she is amazing! We currently live in Rexburg, Idaho 
+                    as we are both finishing our schooling there.</p>
+                <p>Feel free to check out my personal projects in the tab above, or my other repositories on GitHub! 
+                    My projects show off my experience with C#, JavaScript, Python, and SQL relational databases.</p>
+            </section>
+        </div>
     </main>
     <footer>
         <ul class="social"> <!--target="_blank" makes it open a new tab  -->

@@ -26,8 +26,7 @@ html {
 /* Header */
 header {
   background-color: var(--accent-color);
-  margin-top: -48px; /* adds small bar above header bar*/
-  margin-left: -25px;
+  margin-top: -48px; /* removes small bar above header bar*/
 }
 header h1 {
   font-size: 70px;
@@ -54,17 +53,29 @@ a:hover {
 /* Main */
 main {
   display: flex;
-  justify-content: center;
-  padding: 30px;
-}
-section {
+  flex-direction: column;
   padding: 20px;
+}
+main div {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: center;
+}
+main div section {
   border-radius: 8px;
 }
-#bio {
-  background-color: white;
+h3 {
+  font-size: 40px;
+  line-height: 0.5;
+  padding: 0 40px 0 40px;
+  font-family: "Alumni Sans SC";
 }
-p {
+.bio {
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.bio p {
   font-size: 25px;
   padding: 0 40px 0 40px;
   line-height: 1.5;
@@ -72,6 +83,48 @@ p {
 img {
   height: 450px;
   border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.title {
+  background-color: white;
+  border-radius: 8px;
+  padding-left: 12%;
+  padding-right: 12%;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: -80px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  z-index: 1;
+}
+.title h1 {
+  font-size: 80px;
+  line-height: 0;
+  font-family: "Alumni Sans SC";
+}
+.title p {
+  font-size: 30px;
+  font-family: "Alumni Sans SC";
+  line-height: 0;
+}
+
+
+/* Animated JavaScript*/
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+.animation:nth-child(2) {
+  transition-delay: 200ms;
+}
+.animation:nth-child(3) {
+  transition-delay: 400ms;
 }
 
 /* Footer */
@@ -92,7 +145,18 @@ footer ul section {
   display: flex;
 }
 
+/*Be Polite just in case people don't want to see the animations*/
+@media(prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
 /* Breakpoints for Small Screens */
+@media (max-width: 1200px) {
+  main img {
+    height: 350px;
+  }
+}
 @media (max-width: 1000px) {
   header {
     margin-top: -28px;
@@ -112,22 +176,32 @@ footer ul section {
   ul li {
     padding: 5px;
   }
-  main {
+  main div {
     flex-direction: column;
     text-align: center;
-    padding: 5px;
+    padding-bottom: 10px;
   }
-  main p {
+  .title {
+    margin-top: -70px;
+  }
+  .bio p {
     font-size: 18px;
     padding: 0 10px 0 10px;
   }
+  .animation:nth-child(2) {
+    display: none;
+  }
+  .animation:nth-child(3) {
+    display: none;
+  }
   main img {
-    height: 300px;
+    height: 400px;
   }
   .social img {
     height: 40px;
   }
   footer section {
+    padding: 10px;
     gap: 15px;
   }
 }
